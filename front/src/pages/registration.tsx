@@ -8,7 +8,7 @@ const RegistrationPage = () => {
   return (
     <AuthContainer>
       <AuthContent>
-        <form className="flex flex-col gap-5 justify-between font-mono">
+        <form className="flex flex-col gap-5 justify-between font-mono h-full">
           <h1 className="text-lg font-semibold text-black/70 select-none">
             Auth - Registration
           </h1>
@@ -29,13 +29,17 @@ const RegistrationPage = () => {
               placeholder={"********"}
             />
           </div>
-          <div className="flex gap-[4px]">
-            <p className="text-black/50 capitalize">already have an account?</p>
-            <Link to={"/login"} className="uppercase">
-              Login
-            </Link>
+          <div className="flex flex-col gap-3">
+            <div className="flex gap-[4px]">
+              <p className="text-black/50 capitalize">
+                already have an account?
+              </p>
+              <Link to={"/login"} className="uppercase">
+                Login
+              </Link>
+            </div>
+            <AuthLinks />
           </div>
-          <AuthLinks />
           <button className="bg-[#76ABAE] py-2 rounded-sm text-[#31363F] font-semibold active:bg-[#31363F] active:text-[#76ABAE]">
             Registrate
           </button>
